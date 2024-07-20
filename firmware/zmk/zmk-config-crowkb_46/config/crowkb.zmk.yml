@@ -1,0 +1,13 @@
+file_format: "1"
+id: crowkb
+name: crowkb
+type: shield
+url: https://github.com/c-botz/crokb
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+siblings:
+  - crowkb_left
+  - crowkb_right

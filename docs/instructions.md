@@ -8,4 +8,6 @@
 
  - This uses the promicro_pretty footprint. Essentially, you need to bridge the pads on the correct side, depending on the orientation you want your mcu in. If you want the MCU flipped downward, bridge the pads on the bottom side of the pcb. If you want the mcu facing upward, bridge the pads on the top side of the pcb.
 
- - For the display through holes, you'll see pads above them on either side of the pcb. Bridge the pads on the bottom side of the pcb. 
+ - For the display through holes, you'll see pads above them on either side of the pcb. Bridge the pads on the bottom side of the pcb.
+
+ - If you are using a ssd1306 oled, it will use the left 4 of the oled through holes (regardless of left or right keyboard). The fifth one on the right is for the CS connection that the nice!view requires.

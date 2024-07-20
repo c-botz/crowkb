@@ -33,6 +33,6 @@ Most of this can be ordered from aliexpress. For the pcbs and plates, you can do
 ### mcu's i've used
 | qt | part | wireless | wired | note |
 | -- | ---- | --------- | --------------- | -- |
-| 2 | nice!nano | X | | ![zmk firmware in repo](../firmware/zmk) |
+| 2 | nice!nano | X | | [zmk firmware in repo](../firmware/zmk) |
 | 2 | promicro | | X | qmk firmware on the way |
 | 2 | rp2040, promicro compatible | | X | tested kmk and qmk on a couple aliexpress helios clones |

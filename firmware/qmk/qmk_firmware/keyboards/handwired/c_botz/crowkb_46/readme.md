@@ -4,7 +4,7 @@
 
 *A short description of the keyboard/project*
 
-* Keyboard Maintainer: [Ethan Wright](https://github.com/c-botz)
+* Keyboard Maintainer: [c-botz](https://github.com/c-botz)
 * Hardware Supported: *The PCBs, controllers supported*
 * Hardware Availability: *Links to where you can find this hardware*
 

@@ -1,6 +1,6 @@
 # c_botz/crowkb_46
 
-![c_botz/crowkb_46](imgur.com image replace me!)
+![c_botz/crowkb_46](https://imgur.com/Uo6WRGv.jpg)
 
 *A short description of the keyboard/project*
 

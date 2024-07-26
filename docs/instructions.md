@@ -1,5 +1,5 @@
-**this document is in progress, just listing possible hold ups for now**
-
+$${\color{red}this \space document \space is \space in \space progress</code>}$$
+ 
 <img src="../images/pcblocations.png" width="300">
 
 ## battery and power switch
@@ -8,6 +8,7 @@
 
  - For the power switch, I recommend soldering it to the underside of the pcb, to give room for the battery. It works on either side.
 <img src="../images/powerswitch.jpg" width="600">
+<img src="../images/powerswitchunder.jpeg" width="600">
 
 ## bridge pads for mcu and oled
  - This uses the promicro_pretty footprint. Essentially, you need to bridge the pads on the correct side, depending on the orientation you want your mcu in. If you want the MCU flipped downward, bridge the pads on the bottom side of the pcb. If you want the mcu facing upward, bridge the pads on the top side of the pcb. (this is regardless of if you're using the pcb for the left or right side keyboard)

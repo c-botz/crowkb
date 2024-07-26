@@ -1,4 +1,4 @@
-$${\color{red}this \space document \space is \space in \space progress</code>}$$
+**this document is in progress**
  
 <img src="../images/pcblocations.png" width="300">
 

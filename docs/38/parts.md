@@ -7,7 +7,7 @@ Most of this can be ordered from aliexpress. For the pcbs and plates, you can do
 | 38 | Kailh choc v1 style switches | X | X | |
 | 40 | SOD-123 1n4148w smd diodes | X | X | |
 | 2 | ec11 or ec12 encoders | X | X | ec11 has an integrated switch and are big, ec12s are low profile but don't have an integrated switch |
-| 2 | encoder knobs | X | X | |
+| 2 | encoder knobs | X | X | just make sure they work with the encoder you pick (D, knurled, etc)  |
 | 2 | 3 x 6 x 4.3 momentary (reset) switch tht | X | X | |
 | 2 | PJ320A TRRS tht | | X | |
 | 2 | MSK-12C02 smd slide switch | X | | |

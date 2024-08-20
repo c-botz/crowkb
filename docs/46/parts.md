@@ -3,7 +3,7 @@ Most of this can be ordered from aliexpress. For the pcbs and plates, you can do
 ### required
 | qt | part | wireless | wired | note | 
 | -- | ---- | --------- | --------------- | - |
-| 2 | crowkb pcbs  | X | X | recommend 1.6mm thick |
+| 2 | crowkb_46 pcbs  | X | X | recommend 1.6mm thick |
 | 46 | Kailh choc v1 style switches | X | X | |
 | 46 | SOD-123 1n4148w smd diodes | X | X | |
 | 2 | 3 x 6 x 4.3 momentary (reset) switch tht | X | X | |

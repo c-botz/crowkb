@@ -5,8 +5,8 @@ parts and instructions in docs folder
 
 
 ## images
-![wireless](images/wireless.jpg)
+![wireless](images/crowkb_46_wireless.jpg)
 
-![wired](images/wired.jpg)
+![wired](images/crowkb_46_wired.jpg)
 
-![back](images/back.jpg)
+![back](images/crowkb_46_back.jpg)

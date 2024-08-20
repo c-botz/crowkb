@@ -1,0 +1,385 @@
+units:
+    kx: cx
+    ky: cy
+
+points:
+  key: 
+    spread: cx
+    padding: cy
+  zones:
+    matrix:
+      anchor:
+        rotate: 15
+      columns:
+        pinky:
+          key.column_net: P9
+        ring:
+          key.splay: -6
+          key.origin: [3kx,-.75ky]
+          key.column_net: P5
+        middle:
+          key.splay: -3
+          key.origin: [1.75kx,-1.3ky]
+          key.column_net: P6
+        index:
+          key.splay: -6
+          key.origin: [-1.6kx,-.85ky]
+          key.column_net: P7
+        inner:
+          key.stagger: -2 
+          key.column_net: P4
+      rows:
+        bottom:
+          row_net: P19
+        home:
+          row_net: P20
+        top:
+          row_net: P21
+    pinkymod:
+      anchor:
+        ref: matrix_pinky_home
+        shift: [-1kx, -0.5ky]
+      columns:
+        mod:
+          key.column_net: P8
+      rows:
+        home:
+          row_net: P20
+    thumbfan:
+      anchor:
+        ref: matrix_middle_bottom
+        shift: [.6kx, -1.7ky]
+        rotate: -5
+      columns:
+        near:
+          key.splay: -8
+          key.column_net: P5
+        home:
+          key.splay: -8
+          key.origin: [-.5kx,-1.5ky]
+          key.column_net: P6
+        far:
+          key.splay: -8
+          key.origin: [-.5kx,-1.5ky]
+          key.column_net: P7
+      rows:
+        thumb:
+          row_net: P16
+outlines:
+  _switches:
+    - what: rectangle
+      where: true
+      size: 14
+      bound: false
+  _mcu_cutout:
+    - what: polygon
+      points:
+        - ref: matrix_inner_top
+          shift: [1.69kx, 0.11ky]
+        - ref: matrix_inner_top
+          shift: [0.56kx, 0.55ky]
+        - ref: matrix_inner_bottom
+          shift: [ .56kx, -.5ky]
+        - ref: thumbfan_far_thumb
+          shift: [ -.56kx, .56ky]  
+        - ref: thumbfan_far_thumb
+          shift: [0.56kx, 0.53ky]    
+  crowkb_38_bottom_plate:
+    - what: polygon
+      points:
+        # NE
+        - ref: matrix_inner_top
+          shift: [1.69kx, 0.11ky]
+        - ref: matrix_inner_top
+          shift: [0.56kx, 0.11ky]
+        - ref: matrix_inner_top
+          shift: [0.56kx, 0.55ky]
+        - ref: matrix_inner_top
+          shift: [-.45kx, .55ky]
+        - ref: matrix_index_top
+          shift: [0.55kx, 0.55ky]
+        # N
+        - ref: matrix_index_top
+          shift: [-0.78kx, 0.55ky]
+        - ref: matrix_middle_top
+          shift: [0.55kx, 0.55ky]
+        - ref: matrix_middle_top
+          shift: [-0.55kx, 0.55ky]
+        - ref: matrix_ring_top
+          shift: [0.64kx, 0.55ky]          
+        - ref: matrix_ring_top
+          shift: [-0.56kx, 0.55ky]
+        - ref: matrix_ring_top
+          shift: [-0.56kx, 0.17ky]
+        - ref: matrix_pinky_top
+          shift: [0.55kx, 0.55ky]  
+        # NW
+        - ref: matrix_pinky_top
+          shift: [-0.56kx, 0.55ky]
+        - ref: pinkymod_mod_home
+          shift: [0.44kx, 0.55ky]
+        - ref: pinkymod_mod_home
+          shift: [-0.56kx, 0.55ky]
+        # SW
+        - ref: pinkymod_mod_home
+          shift: [-0.56kx, -0.55ky]
+        - ref: pinkymod_mod_home
+          shift: [0.44kx, -0.55ky]
+        - ref: matrix_pinky_bottom
+          shift: [-0.56kx, -0.55ky]
+        - ref: matrix_pinky_bottom
+          shift: [0.55kx, -0.55ky]
+        - ref: matrix_ring_bottom
+          shift: [-0.5kx, -0.55ky]
+        - ref: matrix_ring_bottom
+          shift: [0.55kx, -0.55ky]
+        - ref: matrix_middle_bottom
+          shift: [-0.49kx, -0.55ky]
+        - ref: matrix_middle_bottom
+          shift: [.35kx, -0.55ky]
+        # SE
+        - ref: thumbfan_near_thumb
+          shift: [0.16kx, 0.55ky]
+        - ref: thumbfan_near_thumb
+          shift: [-0.55kx, 0.55ky]
+        - ref: thumbfan_near_thumb
+          shift: [-0.55kx, -0.55ky]
+        - ref: thumbfan_home_thumb
+          shift: [-0.55kx, -0.55ky]
+        - ref: thumbfan_home_thumb
+          shift: [0.55kx, -0.55ky]
+        - ref: thumbfan_far_thumb
+          shift: [0.56kx, -0.55ky]
+        - ref: thumbfan_far_thumb
+          shift: [0.56kx, 0.53ky]     
+      fillet: .5
+  crowkb_38_switch_plate:
+    - crowkb_38_bottom_plate
+    - -_switches
+    - -_mcu_cutout
+pcbs:
+  crowkb_38:
+    outlines:
+      main:
+        outline: crowkb_38_bottom_plate
+    footprints:
+      choc_hs:
+        what: choc
+        where: true
+        params:
+          hotswap: true
+          reverse: true
+          keycaps: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      choc:
+        what: choc
+        where: true
+        adjust:
+          rotate: 180
+        params:
+          reverse: true
+          from: "{{colrow}}"
+          to: "{{column_net}}"
+      promicro:
+        what: promicro_pretty
+        where:
+          ref: matrix_inner_top
+          shift: [1.11kx, -1.055ky]
+          rotate: 270
+        params:
+          GND: GND=
+      oled:
+        what: display_nice_view
+        where:
+          ref: matrix_inner_top
+          shift: [1.11kx, -1.155ky]
+        params:
+          reversible: true
+          include_labels: false
+          include_silkscreen: false
+          GND: GND=
+          MOSI: P2
+          SCK: P3
+          CS: P1
+      chocdiode:
+        what: diode
+        where: true
+        adjust: 
+          shift: [0, -0.2ky]
+          rotate: 180
+        params:
+          through_hole: false
+          via_in_pad: true
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+      trrs:
+        what: trrs
+        where:
+          ref: matrix_inner_bottom
+          shift: [1.69kx,-.57ky]
+          rotate: 270
+        params:
+          D: P0  # sleeve
+          C: GND=  # ring 
+          B: VCC  # ring 
+          A: VCC  # tip
+          reverse: true
+          symmetric: true
+      reset:
+        what: reset_switch_tht_top
+        where:
+          ref: matrix_inner_bottom
+          shift: [.77kx,-.395ky]
+          rotate: 0
+        params:
+          include_silkscreen: true
+          from: GND=
+      rotary:
+        what: rotary
+        where:
+          ref: matrix_inner_bottom
+          shift: [1.2kx, -1.07ky]
+        params:
+          from: encoder
+          to: P4
+          A: P18
+          B: P10
+          C: GND=
+      rotarydiode:
+        what: diode
+        where:
+          ref: matrix_inner_bottom
+          shift: [1.2kx, -1.07ky] 
+        adjust: 
+          rotate: 180
+        params:
+          through_hole: false
+          via_in_pad: true
+          from: encoder
+          to: P16
+      powerswitch:
+        what: power_switch_smd_side
+        where:
+          ref: matrix_inner_top
+          shift: [1.11kx, -.01ky]
+          rotate: 90
+        params:
+          reversible: true
+          include_silkscreen: false
+          include_courtyard: false
+      batpos:
+        what: pad
+        where:
+          ref: matrix_inner_top
+          shift: [.785kx, -.025ky]
+        params:
+          text: +
+          net: BAT_P
+          width: 2
+          height: 2
+      batneg:
+        what: pad
+        where:
+          ref: matrix_inner_top
+          shift: [1.433kx, -.025ky]
+        params:
+          text: '-'
+          net: GND=
+          width: 2
+          height: 2
+      m2_1:
+        what: m2
+        where: 
+          ref: matrix_ring_top
+          shift: [-.62kx,  -.5ky]
+      m2_2:
+        what: m2
+        where:
+          ref: matrix_index_top
+          shift: [.5kx, -.15ky]
+      m2_3:
+        what: m2
+        where:
+          ref: matrix_index_bottom
+          shift: [-.525kx, -.2ky]
+      m2_4:
+        what: m2
+        where:
+          ref: thumbfan_far_thumb
+          shift: [-.595kx, -.05ky]
+      m2_5:
+        what: m2
+        where:
+          ref: pinkymod_mod_home
+          shift: [.5kx, 0ky]          
+  crowkb_38_bottom_plate:
+    outlines:
+      main:
+        outline: crowkb_38_bottom_plate
+    footprints:
+      m2_1:
+        what: m2
+        where: 
+          ref: matrix_ring_top
+          shift: [-.62kx,  -.5ky]
+      m2_2:
+        what: m2
+        where:
+          ref: matrix_index_top
+          shift: [.5kx, -.15ky]
+      m2_3:
+        what: m2
+        where:
+          ref: matrix_index_bottom
+          shift: [-.525kx, -.2ky]
+      m2_4:
+        what: m2
+        where:
+          ref: thumbfan_far_thumb
+          shift: [-.595kx, -.05ky]
+      m2_5:
+        what: m2
+        where:
+          ref: pinkymod_mod_home
+          shift: [.5kx, 0ky]
+  crowkb_38_switch_plate:
+    outlines:
+      main:
+        outline: crowkb_38_switch_plate
+    footprints:
+      screwhead_1:
+        what: drill
+        where: 
+          ref: matrix_ring_top
+          shift: [-.62kx,  -.5ky]
+        params:
+          size: 4.25
+      screwhead_2:
+        what: drill
+        where:
+          ref: matrix_index_top
+          shift: [.5kx, -.15ky]
+        params:
+          size: 4.25
+      screwhead_3:
+        what: drill
+        where:
+          ref: matrix_index_bottom
+          shift: [-.525kx, -.2ky]
+        params:
+          size: 4.25
+      screwhead_4:
+        what: drill
+        where:
+          ref: thumbfan_far_thumb
+          shift: [-.595kx, -.05ky]
+        params:
+          size: 4.25
+      screwhead_5:
+        what: drill
+        where:
+          ref: pinkymod_mod_home
+          shift: [.5kx, 0ky]
+        params:
+          size: 4.25

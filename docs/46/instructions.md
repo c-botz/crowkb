@@ -2,6 +2,10 @@
  
 <img src="../../images/pcblocations.png" width="300">
 
+## fix for issue with left side OLED P2/SDA (pre 7/26/24 pcbs)
+ - If you had the pcb printed before I uploaded the fixed gerber and kicad on 07/26/24, you will need to run a bit of extra solder or a jumper for the **left** side keyboard display to work. My appologies.
+<img src="../../images/pre_7-26-24_pcb_display_fix.jpeg" width="600">
+
 ## battery and power switch
  - For the battery pads, the positive and negative pads are vias. Basically, regardless of side, the positive pad is the one closest to the keys and the negative is the one closer to the outer edge. I mention it because the silkscreen on the crow side covers the + and - markers.
 <img src="../../images/negpos.png" width="600">

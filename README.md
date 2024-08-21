@@ -4,13 +4,15 @@ The crowkb keyboards are split, staggered and splayed keyboard with low placed t
 parts and instructions in docs folder
 
 ## crowkb_38
-![wireless](images/crowkb_38_wireless.jpg)
+![crowkb_38_wireless](images/crowkb_38_wireless.jpg)
 
-![back](images/crowkb_38_back.jpg)
+![crowkb_38_wired](images/crowkb_38_wired.jpg)
+
+![crowkb_38_back](images/crowkb_38_back.jpg)
 
 ## crowkb_46
-![wireless](images/crowkb_46_wireless.jpg)
+![crowkb_46_wireless](images/crowkb_46_wireless.jpg)
 
-![wired](images/crowkb_46_wired.jpg)
+![crowkb_46_wired](images/crowkb_46_wired.jpg)
 
-![back](images/crowkb_46_back.jpg)
+![crowkb_46_back](images/crowkb_46_back.jpg)

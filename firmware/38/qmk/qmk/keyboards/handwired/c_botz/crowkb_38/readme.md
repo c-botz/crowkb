@@ -1,6 +1,6 @@
 # c_botz/crowkb_38
 
-![c_botz/crowkb_38](https://imgur.com/D7WZGYL)
+![c_botz/crowkb_38](https://imgur.com/D7WZGYL.jpg)
 
 *A short description of the keyboard/project*
 

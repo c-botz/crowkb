@@ -1,6 +1,6 @@
-# c_botz/crowkb_46
+# c_botz/crowkb_38
 
-![c_botz/crowkb_46](https://imgur.com/Uo6WRGv.jpg)
+![c_botz/crowkb_38](https://imgur.com/D7WZGYL)
 
 *A short description of the keyboard/project*
 
@@ -10,11 +10,11 @@
 
 Make example for this keyboard (after setting up your build environment):
 
-    make c_botz/crowkb_46:default
+    make c_botz/crowkb_38:default
 
 Flashing example for this keyboard:
 
-    make c_botz/crowkb_46:default:flash
+    make c_botz/crowkb_38:default:flash
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 

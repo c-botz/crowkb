@@ -2,6 +2,10 @@
 The crowkb keyboards are split, staggered and splayed keyboard with low placed thumbkeys. I designed them because I felt a lot of the keyboards in this space have an uncomfortable thumb placement for my size of hands.
 
 parts and instructions in docs folder
+## crowkb_wing
+![crowkb_wing_back](images/crowkb_wing.jpg)
+
+![crowkb_wing_back](images/crowkb_wing_back.jpg)
 
 ## crowkb_38
 ![crowkb_38_wireless](images/crowkb_38_wireless.jpg)
